@@ -24,7 +24,7 @@ const b = parseFloat(inputB)
 const n = parseInt(inputN)
 
 
-if (!isNaN(a) && !isNaN(b) && !isNaN(n) && n > 0) {
+if (!isNaN(a) && !isNaN(b) && !isNaN(n) && n > 0 && a < b) {
 
     const result = trapezoidalIntegrate(func, a, b, n)
 
@@ -32,5 +32,5 @@ if (!isNaN(a) && !isNaN(b) && !isNaN(n) && n > 0) {
     alert(`Результат вычисления: ${result.toFixed(4)}`)
 
 } else {
-    alert("Неверный ввод! Учтите, что n > 0")
+    alert("Неверный ввод! Учтите, что n > 0 и a < b")
 }
